@@ -34,7 +34,7 @@ The MobikulCustomAppBar package provides a highly customizable AppBar widget for
    Takes BuildContext as a parameter, ensuring seamless integration with the Flutter widget tree.
 - **Optimized Visibility Logic**
    Efficiently manages the visibility of the app logo using the checkAppLogVisibility() method, ensuring unnecessary UI elements are not displayed.
-9. Developer-Friendly Defaults**
+- **Developer-Friendly Defaults**
     Provides reasonable default values for parameters like logoWidth, logoHeight, and appBarBackgroundColor.
 
 ## Installation

@@ -1,7 +1,7 @@
 name: mobikul_custom_app_bar
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/SocialMobikul/mobikul_custom_appbar
 
 environment:
   sdk: ^3.5.4
