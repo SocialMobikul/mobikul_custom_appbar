@@ -1,28 +1,64 @@
 library mobikul_custom_app_bar;
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Mobikul Custom App Bar
-
+/// A customizable app bar widget for Flutter applications.
+///
+/// This widget supports dynamic headings, app logo customization (including
+/// dark mode support), leading buttons, and action widgets. It also
+/// includes options for background color and optimized visibility logic.
 class MobikulCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+
+  /// The heading text to be displayed on the app bar.
   final String heading;
+
+  /// The text style for the heading.
   final TextStyle? headingStyle;
+
+  /// A flag to determine whether the app logo should be displayed.
   final bool showAppLogo;
+
+  /// The BuildContext of the current widget.
   final BuildContext context;
+
+  /// A flag to determine if the app bar should have elevation.
   final bool isElevated;
+
+  /// A flag to enable the leading button (usually a back button).
   final bool isLeadingEnable;
+
+  /// A flag to enable home button functionality.
   final bool isHomeEnable;
+
+  /// A flag to enable dark mode logo support.
   final bool? isAppLogoForDarkmode;
+
+  /// A list of action widgets displayed on the app bar.
   final List<Widget>? actions;
+
+  /// Callback function for handling button presses.
   final VoidCallback? onPressed;
+
+  /// The URL for the app's logo.
   final String? appLogoUrl;
+
+  /// The URL for the dark mode app logo.
   final String? darkAppLogoUrl;
+
+  /// The placeholder image to display when the logo fails to load.
   final String? placeHolderImage;
+
+  /// The background color of the app bar.
   final Color? appBarBackgroundColor;
+
+  /// The width of the logo image.
   final double? logoWidth;
+
+  /// The height of the logo image.
   final double? logoHeight;
 
+  /// Creates a customizable app bar.
   MobikulCustomAppBar(
       this.heading,
       this.context,
