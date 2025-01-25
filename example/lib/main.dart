@@ -24,28 +24,27 @@ class CarouselDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MobikulCustomAppBar(
-        "Mobikul Custom App Bar",
-        context,
-        Theme.of(context).textTheme.bodyLarge,
-        isHomeEnable: true,
-        isElevated:false,
-        isAppLogoForDarkmode: true,
-        appBarBackgroundColor: Colors.green,
-        appLogoUrl: "imageURL1",
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () {},
-          ),
-        ], showAppLogo: true,
-      ),
-      body: Center(
-        child: Text("Mobikul Custom App Bar"))
-    );
+        appBar: MobikulCustomAppBar(
+          "Mobikul Custom App Bar",
+          context,
+          Theme.of(context).textTheme.bodyLarge,
+          isHomeEnable: true,
+          isElevated: false,
+          isAppLogoForDarkmode: true,
+          appBarBackgroundColor: Colors.green,
+          appLogoUrl: "imageURL1",
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(Icons.settings),
+              onPressed: () {},
+            ),
+          ],
+          showAppLogo: true,
+        ),
+        body: Center(child: Text("Mobikul Custom App Bar")));
   }
 }

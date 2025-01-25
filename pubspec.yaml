@@ -1,6 +1,6 @@
 name: mobikul_custom_app_bar
 description: "A customizable app bar widget for Flutter applications with dynamic headings, logo customization, and developer-friendly defaults."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/SocialMobikul/mobikul_custom_appbar
 
 environment:

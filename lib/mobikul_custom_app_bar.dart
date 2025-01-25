@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 /// This widget supports dynamic headings, app logo customization (including
 /// dark mode support), leading buttons, and action widgets. It also
 /// includes options for background color and optimized visibility logic.
-class MobikulCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-
+class MobikulCustomAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   /// The heading text to be displayed on the app bar.
   final String heading;
 
@@ -60,24 +60,24 @@ class MobikulCustomAppBar extends StatelessWidget implements PreferredSizeWidget
 
   /// Creates a customizable app bar.
   MobikulCustomAppBar(
-      this.heading,
-      this.context,
-      this.headingStyle, {
-        super.key,
-        this.isElevated = true,
-        this.isLeadingEnable = false,
-        this.isHomeEnable = false,
-        this.isAppLogoForDarkmode = false,
-        this.actions,
-        this.onPressed,
-        this.appLogoUrl,
-        this.darkAppLogoUrl,
-        this.placeHolderImage,
-        this.appBarBackgroundColor = Colors.white,
-        this.logoWidth = 30.0,
-        this.logoHeight = 30.0,
-        required this.showAppLogo,
-      });
+    this.heading,
+    this.context,
+    this.headingStyle, {
+    super.key,
+    this.isElevated = true,
+    this.isLeadingEnable = false,
+    this.isHomeEnable = false,
+    this.isAppLogoForDarkmode = false,
+    this.actions,
+    this.onPressed,
+    this.appLogoUrl,
+    this.darkAppLogoUrl,
+    this.placeHolderImage,
+    this.appBarBackgroundColor = Colors.white,
+    this.logoWidth = 30.0,
+    this.logoHeight = 30.0,
+    required this.showAppLogo,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -85,11 +85,11 @@ class MobikulCustomAppBar extends StatelessWidget implements PreferredSizeWidget
       backgroundColor: appBarBackgroundColor,
       leading: isLeadingEnable
           ? IconButton(
-        onPressed: () {
-          isLeadingEnable ? Navigator.pop(context) : onPressed?.call();
-        },
-        icon: const Icon(Icons.clear),
-      )
+              onPressed: () {
+                isLeadingEnable ? Navigator.pop(context) : onPressed?.call();
+              },
+              icon: const Icon(Icons.clear),
+            )
           : null,
       elevation: isElevated ? null : 0,
       title: Row(
@@ -99,14 +99,19 @@ class MobikulCustomAppBar extends StatelessWidget implements PreferredSizeWidget
             Visibility(
               visible: checkAppLogoVisibility(),
               child: SizedBox(
-                height: (logoHeight != null && logoHeight != 0.0 && (logoHeight ?? 0) <= 300)
+                height: (logoHeight != null &&
+                        logoHeight != 0.0 &&
+                        (logoHeight ?? 0) <= 300)
                     ? logoHeight
                     : AppBar().preferredSize.height / 2,
-                width: (logoWidth != null && logoWidth != 0.0 && (logoWidth ?? 0) <= 300)
+                width: (logoWidth != null &&
+                        logoWidth != 0.0 &&
+                        (logoWidth ?? 0) <= 300)
                     ? logoWidth
                     : AppBar().preferredSize.height / 2,
                 child: Image.network(
-                  isAppLogoForDarkmode == true && ((darkAppLogoUrl ?? "").isNotEmpty)
+                  isAppLogoForDarkmode == true &&
+                          ((darkAppLogoUrl ?? "").isNotEmpty)
                       ? (darkAppLogoUrl ?? "")
                       : (appLogoUrl ?? ""),
                   fit: BoxFit.contain,
